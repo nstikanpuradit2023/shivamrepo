@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+ th:replace="header&footer::Layout(~{::profile})">
+<body>
+<profile>
+<div class="profile-wrapper">
+    <div class="profile-container">
+        <h2 class="profile-title">Profile</h2>
+        <div class="profile-info">
+            <p>Name: <span th:text="${user.name}"></span></p>
+            <p>Email: <span th:text="${user.email}"></span></p>
+            <p>Mobile No: <span th:text="${user.mobileNumber}"></span></p>
+            <p>Farmer ID: <span th:text="${user.farmerId}"></span></p>
+        </div>
+        <a href="/logout" class="profile-logout">Logout</a>
+    </div>
+</div>
+    </profile>
+</body>
+</html>
